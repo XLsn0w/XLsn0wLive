@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		305EA7051FC2876300AE1FBC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305EA7041FC2876300AE1FBC /* IJKMediaFramework.framework */; };
 		305EA7071FC287F200AE1FBC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 305EA7061FC287F200AE1FBC /* libz.tbd */; };
 		305EA7091FC287FB00AE1FBC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 305EA7081FC287FB00AE1FBC /* libbz2.tbd */; };
 		307B35D21FC285A60061C238 /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35B91FC285A60061C238 /* AFNetwork.m */; };
@@ -27,12 +26,12 @@
 		30D73E811FC28A4B001D2778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E7A1FC28A4B001D2778 /* Assets.xcassets */; };
 		30D73E981FC299B3001D2778 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E961FC299B2001D2778 /* Main.storyboard */; };
 		30D73E991FC299B3001D2778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */; };
+		30D73E9B1FC2C0FD001D2778 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D73E9A1FC2C0FD001D2778 /* IJKMediaFramework.framework */; };
 		45AD2DCAC37B390DCDB28385 /* libPods-XLsn0wLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09A213BF18868B0CDE2B180 /* libPods-XLsn0wLive.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		036BFB8D18714780280BE5B8 /* Pods-XLsn0wLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLsn0wLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLsn0wLive/Pods-XLsn0wLive.debug.xcconfig"; sourceTree = "<group>"; };
-		305EA7041FC2876300AE1FBC /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		305EA7061FC287F200AE1FBC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		305EA7081FC287FB00AE1FBC /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		305EA70A1FC2880400AE1FBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -77,6 +76,7 @@
 		30D73E7A1FC28A4B001D2778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D73E961FC299B2001D2778 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30D73E9A1FC2C0FD001D2778 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		44EB7588762EEB080C67D8B8 /* Pods-XLsn0wLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLsn0wLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLsn0wLive/Pods-XLsn0wLive.release.xcconfig"; sourceTree = "<group>"; };
 		D09A213BF18868B0CDE2B180 /* libPods-XLsn0wLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLsn0wLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,8 +88,8 @@
 			files = (
 				45AD2DCAC37B390DCDB28385 /* libPods-XLsn0wLive.a in Frameworks */,
 				305EA7071FC287F200AE1FBC /* libz.tbd in Frameworks */,
-				305EA7051FC2876300AE1FBC /* IJKMediaFramework.framework in Frameworks */,
 				305EA7091FC287FB00AE1FBC /* libbz2.tbd in Frameworks */,
+				30D73E9B1FC2C0FD001D2778 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 		305EA7031FC2876300AE1FBC /* IJKMedia */ = {
 			isa = PBXGroup;
 			children = (
-				305EA7041FC2876300AE1FBC /* IJKMediaFramework.framework */,
+				30D73E9A1FC2C0FD001D2778 /* IJKMediaFramework.framework */,
 			);
 			path = IJKMedia;
 			sourceTree = "<group>";
