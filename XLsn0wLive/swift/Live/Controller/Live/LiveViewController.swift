@@ -14,12 +14,14 @@ class LiveViewController: UIViewController {
         setupUI()
     }
     
-    override func 
+    override func
         viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = UIColor.white
         self.topView.isHidden = true
-        XJAnimationTool.share.showAnimation(view: self.view)
+        XJAnimationTool.shared.showAnimation(view: self.view)
+        
+
         
          NotificationCenter.default.addObserver(self, selector: #selector(playbackStateDidChange(noti:)), name: Notification.Name.IJKMPMoviePlayerLoadStateDidChange, object: nil)
         self.ijkLivePlay.prepareToPlay()
@@ -28,8 +30,8 @@ class LiveViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
-        XJAnimationTool.share.dismissAnimation({})
-        XJAnimationTool.share.removeCycleTimer()
+        XJAnimationTool.shared.dismissAnimation({})
+        XJAnimationTool.shared.removeCycleTimer()
         
         /* 释放 */
         if	ijkLivePlay != nil {
@@ -40,7 +42,7 @@ class LiveViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        XJAnimationTool.share.animationForHeart()
+        XJAnimationTool.shared.animationForHeart()
     }
 }
 
@@ -81,11 +83,11 @@ extension LiveViewController {
         topView.backBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
         
         // 加载不出来时候，关闭从新加载
-        XJAnimationTool.share.myBlock = { [unowned self] () -> () in
+        XJAnimationTool.shared.myBlock = { [unowned self] () -> () in
             self.backClick()
         }
         
-        XJAnimationTool.share.addCycleTimer()
+        XJAnimationTool.shared.addCycleTimer()
     }
 }
 
@@ -101,7 +103,7 @@ extension LiveViewController {
             print("停止")
         case .playing:
             print("正在播放")
-            XJAnimationTool.share.dismissAnimation({
+            XJAnimationTool.shared.dismissAnimation({
                 self.ijkLivePlay.play()
                 self.topView.isHidden = false
             })

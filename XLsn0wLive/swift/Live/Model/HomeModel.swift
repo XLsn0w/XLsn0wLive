@@ -1,10 +1,3 @@
-//
-//  HomeMode.swift
-//  XJDomainLive
-//
-//  Created by 李胜兵 on 2016/12/8.
-//  Copyright © 2016年 付公司. All rights reserved.
-//
 
 import UIKit
 
@@ -27,7 +20,6 @@ class HomeModel: NSObject {
     // 主播信息
     var userInfo : UserModel?
     
-    
     // 自定义构造函数
     init(dict: [String : Any]) {
         super.init()
@@ -38,11 +30,9 @@ class HomeModel: NSObject {
 
 
 class UserModel : NSObject {
-    /// 主播名
-    var nick:String?
     
-    /// 主播头像
-    var portrait:String?
+    var nick:String?/// 主播名
+    var portrait:String?/// 主播头像
     
     init(Dict: [String : Any]) {
         super.init()

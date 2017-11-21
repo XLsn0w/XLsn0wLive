@@ -1,10 +1,3 @@
-//
-//  XJLiveListViewController.swift
-//  XJDomainLive
-//
-//  Created by 李胜兵 on 2016/12/8.
-//  Copyright © 2016年 付公司. All rights reserved.
-//
 
 import UIKit
 import MJRefresh
@@ -33,7 +26,7 @@ extension XJLiveListViewController {
     fileprivate func setupUI() {
         self.title = "XLsn0w"
         tableView.register(UINib(nibName: "XJListTableViewCell", bundle: nil), forCellReuseIdentifier: kCellID)
-        XJAnimationTool.share.showAnimation(view: self.view)
+        XJAnimationTool.shared.showAnimation(view: self.view)
     }
 }
 
@@ -47,7 +40,7 @@ extension XJLiveListViewController {
     
     @objc fileprivate func loadHomeData() {
         homeVM.loadData {
-            XJAnimationTool.share.dismissAnimation({
+            XJAnimationTool.shared.dismissAnimation({
                 self.tableView.mj_header.endRefreshing()
                 self.tableView.reloadData()
             })

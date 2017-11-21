@@ -51,7 +51,7 @@
 		306879C21FC3BEA20060C62C /* c3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 306879A31FC3BEA20060C62C /* c3.gif */; };
 		306879C31FC3BEA20060C62C /* c4.png in Resources */ = {isa = PBXBuildFile; fileRef = 306879A41FC3BEA20060C62C /* c4.png */; };
 		306879C41FC3BEA20060C62C /* d1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 306879A51FC3BEA20060C62C /* d1.gif */; };
-		306879C61FC3BEA20060C62C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879A81FC3BEA20060C62C /* Common.swift */; };
+		306879C61FC3BEA20060C62C /* SwiftyPrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */; };
 		306879C71FC3BEA20060C62C /* XJAnimationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879A91FC3BEA20060C62C /* XJAnimationTool.swift */; };
 		306879C81FC3BEA20060C62C /* XJNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879AA1FC3BEA20060C62C /* XJNetworkTool.swift */; };
 		307B35D21FC285A60061C238 /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35B91FC285A60061C238 /* AFNetwork.m */; };
@@ -149,7 +149,7 @@
 		306879A31FC3BEA20060C62C /* c3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = c3.gif; sourceTree = "<group>"; };
 		306879A41FC3BEA20060C62C /* c4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c4.png; sourceTree = "<group>"; };
 		306879A51FC3BEA20060C62C /* d1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = d1.gif; sourceTree = "<group>"; };
-		306879A81FC3BEA20060C62C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyPrefixHeader.swift; sourceTree = "<group>"; };
 		306879A91FC3BEA20060C62C /* XJAnimationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJAnimationTool.swift; sourceTree = "<group>"; };
 		306879AA1FC3BEA20060C62C /* XJNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNetworkTool.swift; sourceTree = "<group>"; };
 		307B359A1FC279460061C238 /* XLsn0wLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLsn0wLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,7 +439,7 @@
 		306879A61FC3BEA20060C62C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				306879A81FC3BEA20060C62C /* Common.swift */,
+				306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */,
 				306879A91FC3BEA20060C62C /* XJAnimationTool.swift */,
 				306879AA1FC3BEA20060C62C /* XJNetworkTool.swift */,
 			);
@@ -751,7 +751,7 @@
 				306879AB1FC3BEA20060C62C /* XJLiveListViewController.swift in Sources */,
 				3067DC4A1FC3F8C700E17DFA /* RightViewController.m in Sources */,
 				3067DC421FC3F8C700E17DFA /* KeyFrameAnimationController.m in Sources */,
-				306879C61FC3BEA20060C62C /* Common.swift in Sources */,
+				306879C61FC3BEA20060C62C /* SwiftyPrefixHeader.swift in Sources */,
 				307B35DA1FC285A60061C238 /* CustomButton.m in Sources */,
 				3067DC3C1FC3F8C700E17DFA /* DCPathItemButton.m in Sources */,
 				306879C81FC3BEA20060C62C /* XJNetworkTool.swift in Sources */,

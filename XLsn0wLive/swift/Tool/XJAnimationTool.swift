@@ -6,7 +6,7 @@ typealias animationCloseBlock = () -> ()
 
 class XJAnimationTool {
     
-    static var share : XJAnimationTool = XJAnimationTool()
+    static var shared : XJAnimationTool = XJAnimationTool()
     
     fileprivate lazy var imageView : UIImageView = { [unowned self] in
         let imageView = UIImageView(image: UIImage(named: "img_loading_1"))
@@ -98,11 +98,11 @@ extension XJAnimationTool {
     
     @objc fileprivate func scrollToNext() {
         let  time : Double = 0.1
-        XJAnimationTool.share.animationForHeart()
+        XJAnimationTool.shared.animationForHeart()
         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + time) {
-            XJAnimationTool.share.animationForHeart()
+            XJAnimationTool.shared.animationForHeart()
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + time) {
-                XJAnimationTool.share.animationForHeart()
+                XJAnimationTool.shared.animationForHeart()
             }
         }
     }

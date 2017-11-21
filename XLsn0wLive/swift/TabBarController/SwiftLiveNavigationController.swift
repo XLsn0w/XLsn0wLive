@@ -5,6 +5,7 @@ class SwiftLiveNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBar.barTintColor = .red
         setupPanGes()
     }
     
