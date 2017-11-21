@@ -9,14 +9,23 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import <MJRefresh.h>
+#import "MJRefresh.h"
 #import "AFNetwork.h"
-#import <Masonry.h>
+#import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+Extension.h"
 
+///进入TARGETS ->Build Settings -> Packaging 中
+///设置Defines Module为YES
+///设置 Product Module Name ，也可以不设置，默认为工程的名字。
+///在OC需要用到的swift文件中 导入文件 "Product Module Name -Swift.h"  因为 Product Module Name 默认是工程的名字
+///所以直接导入 #import "工程名-Swift.h"
+#import "XLsn0wLive-Swift.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGH  [UIScreen mainScreen].bounds.size.height
+#define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define BMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #endif /* PrefixHeader_pch */
