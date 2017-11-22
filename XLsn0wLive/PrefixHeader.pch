@@ -14,13 +14,15 @@
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "UIView+Extension.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+#import "SVProgressHUD.h"
 
 ///进入TARGETS ->Build Settings -> Packaging 中
 ///设置Defines Module为YES
 ///设置 Product Module Name ，也可以不设置，默认为工程的名字。
 ///在OC需要用到的swift文件中 导入文件 "Product Module Name -Swift.h"  因为 Product Module Name 默认是工程的名字
 ///所以直接导入 #import "工程名-Swift.h"
-#import "XLsn0wLive-Swift.h"
+#import "XLsn0wLive-Swift.h"///引入此头文件 所有swift都能调用objc类
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width

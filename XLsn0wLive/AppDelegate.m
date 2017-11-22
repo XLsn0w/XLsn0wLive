@@ -1,12 +1,13 @@
 
 #import "AppDelegate.h"
+#import "LiveNavigationController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
-    SwiftLiveNavigationController *liveNavC =  [[SwiftLiveNavigationController alloc] initWithRootViewController:[LiveTabBarController new]];
+    LiveNavigationController *liveNavC =  [[LiveNavigationController alloc] initWithRootViewController:[SwiftLiveTabBarController new]];
     self.window.rootViewController = liveNavC;
     return YES;
 }

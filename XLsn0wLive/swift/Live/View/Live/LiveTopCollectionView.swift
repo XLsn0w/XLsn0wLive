@@ -27,7 +27,6 @@ class LiveTopCollectionView: UICollectionView {
     }
 }
 
-
 extension LiveTopCollectionView {
     fileprivate func setupUI() {
         dataSource = self

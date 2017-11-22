@@ -1,8 +1,6 @@
 
 #import "PlayerViewController.h"
-#import <IJKMediaFramework/IJKMediaFramework.h>
-#import "UIImageView+WebCache.h"
-#import "SVProgressHUD.h"
+
 #import "DMHeartFlyView.h"
 #import <Accelerate/Accelerate.h>
 
@@ -11,7 +9,8 @@
 
 @interface PlayerViewController ()
 
-@property (atomic, retain) id <IJKMediaPlayback> player;
+//@property (atomic, retain) id<IJKMediaPlayback> player;
+@property (atomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *player;
 
 @property (weak, nonatomic) UIView *PlayerView;
 
@@ -33,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     // 播放视频
     [self goPlaying];
@@ -45,7 +45,6 @@
     
     // 创建按钮
     [self setupBtn];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,7 +69,7 @@
 - (void)setupBtn {
     // 返回
     UIButton * backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(10, 64 / 2 - 8, 33, 33);
+    backBtn.frame = CGRectMake(10, SCREENHEIGH-44, 33, 33);
     [backBtn setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     backBtn.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -81,7 +80,7 @@
     
     // 暂停
     UIButton * playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    playBtn.frame = CGRectMake(XJScreenW - 33 - 10, 64 / 2 - 8, 33, 33);
+    playBtn.frame = CGRectMake(XJScreenW - 33 - 10, SCREENHEIGH-44, 33, 33);
     
     if (self.number == 0) {
         [playBtn setImage:[UIImage imageNamed:@"暂停"] forState:(UIControlStateNormal)];
@@ -97,24 +96,6 @@
     playBtn.layer.shadowOpacity = 0.5;
     playBtn.layer.shadowRadius = 1;
     [self.view addSubview:playBtn];
-    
-    CGFloat btnHW = 36;
-    CGFloat margin = 20;
-    CGFloat btnY = XJScreenH - 36 - 10;
-    CGFloat linesW = (SCREENWIDTH - (btnHW) - (margin * 2))/3;
-    NSArray *images = @[@"normalMsg",@"privateMsg",@"share",@"gift"];
-    for (int i = 0; i < 4; ++i) {
-        UIButton * heartBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        heartBtn.frame = CGRectMake(margin + (linesW * i),btnY , btnHW, btnHW);
-        [heartBtn setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-        [heartBtn addTarget:self action:@selector(showTheLove:) forControlEvents:UIControlEventTouchUpInside];
-        heartBtn.layer.shadowColor = [UIColor blackColor].CGColor;
-        heartBtn.layer.shadowOffset = CGSizeMake(0, 0);
-        heartBtn.layer.shadowOpacity = 0.5;
-        heartBtn.layer.shadowRadius = 1;
-        heartBtn.adjustsImageWhenHighlighted = NO;
-        [self.view addSubview:heartBtn];
-    }
 }
 
 - (void)goPlaying {
@@ -202,7 +183,7 @@
     //给汽车添加动画
     [UIView animateWithDuration:durTime animations:^{
         
-        porsche918.frame = CGRectMake(XJScreenW * 0.5 - 100, XJScreenH * 0.5 - 100 * 0.5, 240, 120);
+        porsche918.frame = CGRectMake(XJScreenW / 2, XJScreenH * 0.5 - 100 * 0.5, 240, 120);
     }];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(durTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -219,7 +200,7 @@
     //烟花
     
     CALayer *fireworksL = [CALayer layer];
-    fireworksL.frame = CGRectMake((XJScreenW - 250) * 0.5, 100, 250, 50);
+    fireworksL.frame = CGRectMake(XJScreenW/2, 100, 250, 50);
     fireworksL.contents = (id)[UIImage imageNamed:@"gift_fireworks_0"].CGImage;
     [self.view.layer addSublayer:fireworksL];
     

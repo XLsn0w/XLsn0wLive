@@ -39,7 +39,7 @@
 		306879B51FC3BEA20060C62C /* LiveTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306879911FC3BEA20060C62C /* LiveTopView.xib */; };
 		306879B61FC3BEA20060C62C /* XJHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879931FC3BEA20060C62C /* XJHomeViewModel.swift */; };
 		306879B81FC3BEA20060C62C /* SwiftLiveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */; };
-		306879B91FC3BEA20060C62C /* LiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879981FC3BEA20060C62C /* LiveTabBarController.swift */; };
+		306879B91FC3BEA20060C62C /* SwiftLiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879981FC3BEA20060C62C /* SwiftLiveTabBarController.swift */; };
 		306879BA1FC3BEA20060C62C /* XJDomain.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3068799A1FC3BEA20060C62C /* XJDomain.bundle */; };
 		306879BB1FC3BEA20060C62C /* b1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3068799C1FC3BEA20060C62C /* b1.gif */; };
 		306879BC1FC3BEA20060C62C /* b2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3068799D1FC3BEA20060C62C /* b2.gif */; };
@@ -59,10 +59,9 @@
 		307B35D41FC285A60061C238 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35BD1FC285A60061C238 /* NSObject+Log.m */; };
 		307B35D51FC285A60061C238 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35BF1FC285A60061C238 /* UIView+Extension.m */; };
 		307B35D61FC285A60061C238 /* UIViewController+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C11FC285A60061C238 /* UIViewController+Extend.m */; };
-		307B35D71FC285A60061C238 /* CommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C51FC285A60061C238 /* CommendViewController.m */; };
+		307B35D71FC285A60061C238 /* ObjcLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C51FC285A60061C238 /* ObjcLiveViewController.m */; };
 		307B35D81FC285A60061C238 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C71FC285A60061C238 /* PlayerViewController.m */; };
 		307B35D91FC285A60061C238 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CA1FC285A60061C238 /* PlayerModel.m */; };
-		307B35DA1FC285A60061C238 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CD1FC285A60061C238 /* CustomButton.m */; };
 		307B35DB1FC285A60061C238 /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CF1FC285A60061C238 /* DMHeartFlyView.m */; };
 		307B35DC1FC285A60061C238 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35D11FC285A60061C238 /* PlayerTableViewCell.m */; };
 		30D73E7B1FC28A4B001D2778 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D73E6E1FC28A49001D2778 /* AppDelegate.m */; };
@@ -137,7 +136,7 @@
 		306879911FC3BEA20060C62C /* LiveTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveTopView.xib; sourceTree = "<group>"; };
 		306879931FC3BEA20060C62C /* XJHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJHomeViewModel.swift; sourceTree = "<group>"; };
 		306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLiveNavigationController.swift; sourceTree = "<group>"; };
-		306879981FC3BEA20060C62C /* LiveTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTabBarController.swift; sourceTree = "<group>"; };
+		306879981FC3BEA20060C62C /* SwiftLiveTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLiveTabBarController.swift; sourceTree = "<group>"; };
 		3068799A1FC3BEA20060C62C /* XJDomain.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XJDomain.bundle; sourceTree = "<group>"; };
 		3068799C1FC3BEA20060C62C /* b1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = b1.gif; sourceTree = "<group>"; };
 		3068799D1FC3BEA20060C62C /* b2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = b2.gif; sourceTree = "<group>"; };
@@ -163,14 +162,12 @@
 		307B35BF1FC285A60061C238 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		307B35C01FC285A60061C238 /* UIViewController+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extend.h"; sourceTree = "<group>"; };
 		307B35C11FC285A60061C238 /* UIViewController+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extend.m"; sourceTree = "<group>"; };
-		307B35C41FC285A60061C238 /* CommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommendViewController.h; sourceTree = "<group>"; };
-		307B35C51FC285A60061C238 /* CommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommendViewController.m; sourceTree = "<group>"; };
+		307B35C41FC285A60061C238 /* ObjcLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcLiveViewController.h; sourceTree = "<group>"; };
+		307B35C51FC285A60061C238 /* ObjcLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcLiveViewController.m; sourceTree = "<group>"; };
 		307B35C61FC285A60061C238 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		307B35C71FC285A60061C238 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		307B35C91FC285A60061C238 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
 		307B35CA1FC285A60061C238 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
-		307B35CC1FC285A60061C238 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		307B35CD1FC285A60061C238 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		307B35CE1FC285A60061C238 /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
 		307B35CF1FC285A60061C238 /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
 		307B35D01FC285A60061C238 /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
@@ -328,7 +325,6 @@
 		3068797E1FC3BEA20060C62C /* swift */ = {
 			isa = PBXGroup;
 			children = (
-				306879C91FC3C61D0060C62C /* TabBarController */,
 				3068797F1FC3BEA20060C62C /* Live */,
 				306879A61FC3BEA20060C62C /* Tool */,
 			);
@@ -439,20 +435,11 @@
 		306879A61FC3BEA20060C62C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */,
-				306879A91FC3BEA20060C62C /* XJAnimationTool.swift */,
 				306879AA1FC3BEA20060C62C /* XJNetworkTool.swift */,
+				306879A91FC3BEA20060C62C /* XJAnimationTool.swift */,
+				306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */,
 			);
 			path = Tool;
-			sourceTree = "<group>";
-		};
-		306879C91FC3C61D0060C62C /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */,
-				306879981FC3BEA20060C62C /* LiveTabBarController.swift */,
-			);
-			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		307B35911FC279460061C238 = {
@@ -478,6 +465,8 @@
 			children = (
 				30D73E761FC28A4A001D2778 /* AppDelegate.h */,
 				30D73E6E1FC28A49001D2778 /* AppDelegate.m */,
+				306879981FC3BEA20060C62C /* SwiftLiveTabBarController.swift */,
+				306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */,
 				30D73E7A1FC28A4B001D2778 /* Assets.xcassets */,
 				30D73E771FC28A4B001D2778 /* Info.plist */,
 				30D73E751FC28A4A001D2778 /* main.m */,
@@ -525,8 +514,8 @@
 		307B35C31FC285A60061C238 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				307B35C41FC285A60061C238 /* CommendViewController.h */,
-				307B35C51FC285A60061C238 /* CommendViewController.m */,
+				307B35C41FC285A60061C238 /* ObjcLiveViewController.h */,
+				307B35C51FC285A60061C238 /* ObjcLiveViewController.m */,
 				307B35C61FC285A60061C238 /* PlayerViewController.h */,
 				307B35C71FC285A60061C238 /* PlayerViewController.m */,
 			);
@@ -545,8 +534,6 @@
 		307B35CB1FC285A60061C238 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				307B35CC1FC285A60061C238 /* CustomButton.h */,
-				307B35CD1FC285A60061C238 /* CustomButton.m */,
 				307B35CE1FC285A60061C238 /* DMHeartFlyView.h */,
 				307B35CF1FC285A60061C238 /* DMHeartFlyView.m */,
 				307B35D01FC285A60061C238 /* PlayerTableViewCell.h */,
@@ -752,7 +739,6 @@
 				3067DC4A1FC3F8C700E17DFA /* RightViewController.m in Sources */,
 				3067DC421FC3F8C700E17DFA /* KeyFrameAnimationController.m in Sources */,
 				306879C61FC3BEA20060C62C /* SwiftyPrefixHeader.swift in Sources */,
-				307B35DA1FC285A60061C238 /* CustomButton.m in Sources */,
 				3067DC3C1FC3F8C700E17DFA /* DCPathItemButton.m in Sources */,
 				306879C81FC3BEA20060C62C /* XJNetworkTool.swift in Sources */,
 				306879B41FC3BEA20060C62C /* LiveTopView.swift in Sources */,
@@ -763,7 +749,7 @@
 				3067DC3F1FC3F8C700E17DFA /* BaseViewController.m in Sources */,
 				306879B61FC3BEA20060C62C /* XJHomeViewModel.swift in Sources */,
 				306879AD1FC3BEA20060C62C /* LiveViewController.swift in Sources */,
-				307B35D71FC285A60061C238 /* CommendViewController.m in Sources */,
+				307B35D71FC285A60061C238 /* ObjcLiveViewController.m in Sources */,
 				307B35D41FC285A60061C238 /* NSObject+Log.m in Sources */,
 				306879B11FC3BEA20060C62C /* LiveTopCollectionView.swift in Sources */,
 				3067DC3E1FC3F8C700E17DFA /* BaseAnimationController.m in Sources */,
@@ -784,7 +770,7 @@
 				307B35D31FC285A60061C238 /* LiveNavigationController.m in Sources */,
 				30D73E7F1FC28A4B001D2778 /* main.m in Sources */,
 				306879AF1FC3BEA20060C62C /* XJListTableViewCell.swift in Sources */,
-				306879B91FC3BEA20060C62C /* LiveTabBarController.swift in Sources */,
+				306879B91FC3BEA20060C62C /* SwiftLiveTabBarController.swift in Sources */,
 				3067DC3B1FC3F8C700E17DFA /* DCPathCenterButton.m in Sources */,
 				3067DC441FC3F8C700E17DFA /* TitleButton.m in Sources */,
 				307B35D81FC285A60061C238 /* PlayerViewController.m in Sources */,
@@ -917,6 +903,7 @@
 				);
 				GCC_PREFIX_HEADER = XLsn0wLive/PrefixHeader.pch;
 				INFOPLIST_FILE = XLsn0wLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.XLsn0wLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -941,6 +928,7 @@
 				);
 				GCC_PREFIX_HEADER = XLsn0wLive/PrefixHeader.pch;
 				INFOPLIST_FILE = XLsn0wLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xlsn0w.XLsn0wLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";

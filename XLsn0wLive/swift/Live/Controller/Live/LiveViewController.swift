@@ -23,7 +23,10 @@ class LiveViewController: UIViewController {
         
 
         
-         NotificationCenter.default.addObserver(self, selector: #selector(playbackStateDidChange(noti:)), name: Notification.Name.IJKMPMoviePlayerLoadStateDidChange, object: nil)
+         NotificationCenter.default.addObserver(self,
+                                                selector: #selector(playbackStateDidChange(noti:)),
+                                                name: Notification.Name.IJKMPMoviePlayerLoadStateDidChange,
+                                                object: nil)
         self.ijkLivePlay.prepareToPlay()
     }
     

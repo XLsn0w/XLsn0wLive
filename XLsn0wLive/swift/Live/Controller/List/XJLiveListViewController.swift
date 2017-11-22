@@ -12,8 +12,15 @@ class XJLiveListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //声明tableView的位置 添加下面代码
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+            tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0)
+            tableView.scrollIndicatorInsets = tableView.contentInset
+        }
         setupUI()
         refreshData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,7 +31,7 @@ class XJLiveListViewController: UIViewController {
 
 extension XJLiveListViewController {
     fileprivate func setupUI() {
-        self.title = "XLsn0w"
+        
         tableView.register(UINib(nibName: "XJListTableViewCell", bundle: nil), forCellReuseIdentifier: kCellID)
         XJAnimationTool.shared.showAnimation(view: self.view)
     }
@@ -50,12 +57,12 @@ extension XJLiveListViewController {
 
 extension XJLiveListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  homeVM.anchors.count
+        return  homeVM.homeModelArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellID, for: indexPath) as! XJListTableViewCell
-        cell.anchorModel = homeVM.anchors[indexPath.row]
+        cell.anchorModel = homeVM.homeModelArray[indexPath.row]
         return cell
     }
     
@@ -77,7 +84,7 @@ extension XJLiveListViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = homeVM.anchors[indexPath.row]
+        let model = homeVM.homeModelArray[indexPath.row]
         DispatchQueue.main.async {
             let vc = LiveViewController()
             vc.anchorModel = model

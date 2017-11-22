@@ -9,9 +9,9 @@
 
 @implementation LiveNavigationController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+
     self.backBtn = ({       
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
@@ -29,6 +29,7 @@
     if (self.viewControllers.count > 0) {
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backBtn];
         viewController.hidesBottomBarWhenPushed = YES;
+//        viewController.navigationController.navigationBar.hidden = YES;
     }
     [super pushViewController:viewController animated:animated];
 }

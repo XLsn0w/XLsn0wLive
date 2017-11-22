@@ -1,10 +1,3 @@
-//
-//  XJListTableViewCell.swift
-//  XJDomainLive
-//
-//  Created by 李胜兵 on 2016/12/8.
-//  Copyright © 2016年 付公司. All rights reserved.
-//
 
 import UIKit
 import Kingfisher
@@ -27,6 +20,7 @@ class XJListTableViewCell: UITableViewCell {
             labelNums.text = "\(anchorModel.online_users)人在看"
             cityLabel.text = anchorModel.city
             name.text = anchorModel.userInfo?.nick
+            
             var imageUrl = anchorModel.userInfo?.portrait
             if imageUrl?.hasPrefix("http://img2.inke.cn/") == false {
                 imageUrl = "http://img2.inke.cn/" + (anchorModel.userInfo?.portrait)!

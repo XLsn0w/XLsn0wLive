@@ -1,52 +1,46 @@
-//
-//  CommendViewController.m
-//  NOW
-//
-//  Created by ArJun on 16/8/7.
-//  Copyright © 2016年 ArJun. All rights reserved.
-//
 
-#import "CommendViewController.h"
+#import "ObjcLiveViewController.h"
+
 #import "PlayerTableViewCell.h"
 #import "PlayerViewController.h"
-#import "CustomButton.h"
 #import "PlayerModel.h"
 
 #define mainURL @"http://service.inke.com/api/live/aggregation?imsi=&uid=147808343&proto=6&imei=&interest=1&location=0"
 #define Ratio 708/550
 
-@interface CommendViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ObjcLiveViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
-@implementation CommendViewController
+@implementation ObjcLiveViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self addTimerNotifacition];
+    self.navigationController.navigationItem.title = @"XLsn0w";
     [self bulidTableView];
     [self bulidCenterBtn];
     [self addRefresh];
 }
-#pragma mark ---
-- (void)addTimerNotifacition{
-//    NSTimer *timer = [NSTimer timerWithTimeInterval:10 target:self selector:@selector(loadData) userInfo:nil repeats:YES];
-//    [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
-}
 
-- (void)bulidTableView{
+- (void)bulidTableView {
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * Ratio + 1;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
+    //声明tableView的位置 添加下面代码
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+        _tableView.scrollIndicatorInsets = _tableView.contentInset;
+    }
 }
 - (void)bulidCenterBtn{
-    CustomButton *btn = [[CustomButton alloc]init];
+    UIButton *btn = [[UIButton alloc]init];
     [btn setImage:[UIImage imageNamed:@"logo_3745aaf"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(customBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -94,7 +88,6 @@
         [self.tableView.mj_header endRefreshing];
     }];
 }
-
 
 #pragma mark - ---| UITableViewDataSource |---
 

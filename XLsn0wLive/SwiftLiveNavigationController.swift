@@ -3,9 +3,16 @@ import UIKit
 
 class SwiftLiveNavigationController: UINavigationController {
 
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.barTintColor = .red
+        self.navigationBar.tintColor = .white
+ 
+        let dict:Dictionary = [NSForegroundColorAttributeName : UIColor.white];
+        
+        self.navigationBar.titleTextAttributes = dict;
         setupPanGes()
     }
     
