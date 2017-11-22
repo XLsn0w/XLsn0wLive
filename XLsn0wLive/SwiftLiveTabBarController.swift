@@ -5,8 +5,8 @@ class SwiftLiveTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addChildViewController(XJLiveListViewController(), imageName: "liveList", title: "swift")
         objc_addChildViewController(ObjcLiveViewController(), imageName: "liveList", title: "objc")
+        addChildViewController(XJLiveListViewController(), imageName: "liveList", title: "swift")
     }
 }
 

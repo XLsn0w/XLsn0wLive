@@ -21,6 +21,7 @@
     }
     return self;
 }
+
 - (void)bulidPlayerCell{
     _iconImage = [[UIImageView alloc]init];
     _iconImage.layer.cornerRadius = 25;

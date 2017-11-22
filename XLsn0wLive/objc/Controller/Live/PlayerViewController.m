@@ -1,8 +1,6 @@
 
 #import "PlayerViewController.h"
-
-#import "DMHeartFlyView.h"
-#import <Accelerate/Accelerate.h>
+#import "HeartGiftAnimationView.h"
 
 #define XJScreenH [UIScreen mainScreen].bounds.size.height
 #define XJScreenW [UIScreen mainScreen].bounds.size.width
@@ -11,19 +9,12 @@
 
 //@property (atomic, retain) id<IJKMediaPlayback> player;
 @property (atomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *player;
-
 @property (weak, nonatomic) UIView *PlayerView;
-
 @property (atomic, strong) NSURL *url;
-
 @property (nonatomic, assign)int number;
-
 @property (nonatomic, assign)CGFloat heartSize;
-
 @property (nonatomic, strong)UIImageView *dimIamge;
-
 @property (nonatomic, strong) NSArray *fireworksArray;
-
 @property (nonatomic, weak) CALayer *fireworksL;
 
 @end
@@ -163,70 +154,11 @@
 - (void)rote{
     _heartSize = 35;
     
-    
-    DMHeartFlyView* heart = [[DMHeartFlyView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    HeartGiftAnimationView *heart = [[HeartGiftAnimationView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     [self.view addSubview:heart];
-    CGPoint fountainSource = CGPointMake(SCREENWIDTH-_heartSize, self.view.bounds.size.height - _heartSize/2.0 - 10);
-    heart.center = fountainSource;
+
+    heart.center = CGPointMake(SCREENWIDTH/2, self.view.bounds.size.height - _heartSize/2.0 - 10);
     [heart animateInView:self.view];
-}
-//送礼物
-- (void)showMyPorsche918 {
-    CGFloat durTime = 3.0;
-    
-    UIImageView *porsche918 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"porsche"]];
-    
-    //设置汽车初始位置
-    porsche918.frame = CGRectMake(0, 0, 0, 0);
-    [self.view addSubview:porsche918];
-    
-    //给汽车添加动画
-    [UIView animateWithDuration:durTime animations:^{
-        
-        porsche918.frame = CGRectMake(XJScreenW / 2, XJScreenH * 0.5 - 100 * 0.5, 240, 120);
-    }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(durTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //
-        [UIView animateWithDuration:0.5 animations:^{
-            porsche918.alpha = 0;
-        } completion:^(BOOL finished) {
-            [porsche918 removeFromSuperview];
-        }];
-    });
-    
-    
-    
-    //烟花
-    
-    CALayer *fireworksL = [CALayer layer];
-    fireworksL.frame = CGRectMake(XJScreenW/2, 100, 250, 50);
-    fireworksL.contents = (id)[UIImage imageNamed:@"gift_fireworks_0"].CGImage;
-    [self.view.layer addSublayer:fireworksL];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(durTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:0.5 animations:^{
-            //没找到设置透明度的方法，有创意可以自己写
-            //            fireworksL.alpha = 0;
-        } completion:^(BOOL finished) {
-            [fireworksL removeFromSuperlayer];
-        }];
-    });
-    _fireworksL = fireworksL;
-    
-    
-    
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 1; i < 3; i++) {
-        
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"gift_fireworks_%d",i]];
-        [tempArray addObject:image];
-    }
-    _fireworksArray = tempArray;
-    
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats:YES];
 }
 
 static int _fishIndex = 0;
@@ -241,8 +173,6 @@ static int _fishIndex = 0;
     UIImage *image = self.fireworksArray[_fishIndex];
     _fireworksL.contents = (id)image.CGImage;
 }
-
-
 
 #pragma Install Notifiacation
 - (void)installMovieNotificationObservers {
@@ -283,7 +213,6 @@ static int _fishIndex = 0;
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:IJKMPMoviePlayerPlaybackStateDidChangeNotification
                                                   object:_player];
-    
 }
 
 #pragma Selector func
@@ -364,6 +293,5 @@ static int _fishIndex = 0;
     [[NSNotificationCenter defaultCenter]removeObserver:self];
     NSLog(@"dealloc %s",__FUNCTION__);
 }
-
 
 @end

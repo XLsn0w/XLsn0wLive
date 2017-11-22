@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DMHeartFlyView : UIView
+@interface HeartGiftAnimationView : UIView
 
 - (void)animateInView:(UIView *)view;
 

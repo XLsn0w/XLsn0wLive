@@ -19,7 +19,7 @@
     success:(nullable void (^ )( id  _Nonnull json))success
     failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
 
-/// POST请求 参数解释同上
+/// POST请求  参数解释同上
 + (void)POST:(nullable NSString *)URLString
   parameters:(nullable id)parameters
      success:(nullable void (^ )(id  _Nonnull json))success

@@ -39,6 +39,7 @@
         _tableView.scrollIndicatorInsets = _tableView.contentInset;
     }
 }
+
 - (void)bulidCenterBtn{
     UIButton *btn = [[UIButton alloc]init];
     [btn setImage:[UIImage imageNamed:@"logo_3745aaf"] forState:UIControlStateNormal];
@@ -50,9 +51,11 @@
         make.bottom.equalTo(self.view).offset(-20);
     }];
 }
+
 - (void)customBtnClick{
     NSLog(@"%s",__func__);
 }
+
 #pragma mark - ---| 添加下拉刷新 |---
 - (void)addRefresh {
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];

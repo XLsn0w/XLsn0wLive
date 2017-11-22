@@ -62,13 +62,12 @@
 		307B35D71FC285A60061C238 /* ObjcLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C51FC285A60061C238 /* ObjcLiveViewController.m */; };
 		307B35D81FC285A60061C238 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C71FC285A60061C238 /* PlayerViewController.m */; };
 		307B35D91FC285A60061C238 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CA1FC285A60061C238 /* PlayerModel.m */; };
-		307B35DB1FC285A60061C238 /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CF1FC285A60061C238 /* DMHeartFlyView.m */; };
+		307B35DB1FC285A60061C238 /* HeartGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */; };
 		307B35DC1FC285A60061C238 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35D11FC285A60061C238 /* PlayerTableViewCell.m */; };
 		30D73E7B1FC28A4B001D2778 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D73E6E1FC28A49001D2778 /* AppDelegate.m */; };
 		30D73E7F1FC28A4B001D2778 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D73E751FC28A4A001D2778 /* main.m */; };
 		30D73E801FC28A4B001D2778 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E771FC28A4B001D2778 /* Info.plist */; };
 		30D73E811FC28A4B001D2778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E7A1FC28A4B001D2778 /* Assets.xcassets */; };
-		30D73E981FC299B3001D2778 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E961FC299B2001D2778 /* Main.storyboard */; };
 		30D73E991FC299B3001D2778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */; };
 		30D73E9B1FC2C0FD001D2778 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D73E9A1FC2C0FD001D2778 /* IJKMediaFramework.framework */; };
 		DC4E955B01FBC4C38DF1A57B /* Pods_XLsn0wLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5A808504F1C83E19123276 /* Pods_XLsn0wLive.framework */; };
@@ -168,8 +167,8 @@
 		307B35C71FC285A60061C238 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		307B35C91FC285A60061C238 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
 		307B35CA1FC285A60061C238 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
-		307B35CE1FC285A60061C238 /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
-		307B35CF1FC285A60061C238 /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
+		307B35CE1FC285A60061C238 /* HeartGiftAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartGiftAnimationView.h; sourceTree = "<group>"; };
+		307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGiftAnimationView.m; sourceTree = "<group>"; };
 		307B35D01FC285A60061C238 /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
 		307B35D11FC285A60061C238 /* PlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
 		30D73E6E1FC28A49001D2778 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,7 +177,6 @@
 		30D73E771FC28A4B001D2778 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D73E781FC28A4B001D2778 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		30D73E7A1FC28A4B001D2778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		30D73E961FC299B2001D2778 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D73E9A1FC2C0FD001D2778 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		30D73E9C1FC2D8C2001D2778 /* XLsn0wLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLsn0wLive-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -201,6 +199,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305DFD041FC57A00006BE4F1 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				307B35C41FC285A60061C238 /* ObjcLiveViewController.h */,
+				307B35C51FC285A60061C238 /* ObjcLiveViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		305DFD051FC57A12006BE4F1 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				307B35C61FC285A60061C238 /* PlayerViewController.h */,
+				307B35C71FC285A60061C238 /* PlayerViewController.m */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		305EA7031FC2876300AE1FBC /* IJKMedia */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				3068797F1FC3BEA20060C62C /* Live */,
-				306879A61FC3BEA20060C62C /* Tool */,
+				306879A61FC3BEA20060C62C /* Utiliy */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -432,14 +448,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		306879A61FC3BEA20060C62C /* Tool */ = {
+		306879A61FC3BEA20060C62C /* Utiliy */ = {
 			isa = PBXGroup;
 			children = (
+				306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */,
 				306879AA1FC3BEA20060C62C /* XJNetworkTool.swift */,
 				306879A91FC3BEA20060C62C /* XJAnimationTool.swift */,
 				306879A81FC3BEA20060C62C /* SwiftyPrefixHeader.swift */,
 			);
-			path = Tool;
+			path = Utiliy;
 			sourceTree = "<group>";
 		};
 		307B35911FC279460061C238 = {
@@ -466,14 +483,12 @@
 				30D73E761FC28A4A001D2778 /* AppDelegate.h */,
 				30D73E6E1FC28A49001D2778 /* AppDelegate.m */,
 				306879981FC3BEA20060C62C /* SwiftLiveTabBarController.swift */,
-				306879971FC3BEA20060C62C /* SwiftLiveNavigationController.swift */,
 				30D73E7A1FC28A4B001D2778 /* Assets.xcassets */,
 				30D73E771FC28A4B001D2778 /* Info.plist */,
 				30D73E751FC28A4A001D2778 /* main.m */,
 				30D73E781FC28A4B001D2778 /* PrefixHeader.pch */,
 				30D73E9C1FC2D8C2001D2778 /* XLsn0wLive-Bridging-Header.h */,
 				30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */,
-				30D73E961FC299B2001D2778 /* Main.storyboard */,
 				307B35C21FC285A60061C238 /* objc */,
 				3068797E1FC3BEA20060C62C /* swift */,
 				3067DC4B1FC3F95600E17DFA /* Animation */,
@@ -483,7 +498,7 @@
 			path = XLsn0wLive;
 			sourceTree = "<group>";
 		};
-		307B35B71FC285A60061C238 /* Tools */ = {
+		307B35B71FC285A60061C238 /* Utiliy */ = {
 			isa = PBXGroup;
 			children = (
 				307B35B81FC285A60061C238 /* AFNetwork.h */,
@@ -497,7 +512,7 @@
 				307B35C01FC285A60061C238 /* UIViewController+Extend.h */,
 				307B35C11FC285A60061C238 /* UIViewController+Extend.m */,
 			);
-			path = Tools;
+			path = Utiliy;
 			sourceTree = "<group>";
 		};
 		307B35C21FC285A60061C238 /* objc */ = {
@@ -506,7 +521,7 @@
 				307B35C31FC285A60061C238 /* Controller */,
 				307B35CB1FC285A60061C238 /* View */,
 				307B35C81FC285A60061C238 /* Model */,
-				307B35B71FC285A60061C238 /* Tools */,
+				307B35B71FC285A60061C238 /* Utiliy */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -514,10 +529,8 @@
 		307B35C31FC285A60061C238 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				307B35C41FC285A60061C238 /* ObjcLiveViewController.h */,
-				307B35C51FC285A60061C238 /* ObjcLiveViewController.m */,
-				307B35C61FC285A60061C238 /* PlayerViewController.h */,
-				307B35C71FC285A60061C238 /* PlayerViewController.m */,
+				305DFD041FC57A00006BE4F1 /* List */,
+				305DFD051FC57A12006BE4F1 /* Live */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -534,10 +547,10 @@
 		307B35CB1FC285A60061C238 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				307B35CE1FC285A60061C238 /* DMHeartFlyView.h */,
-				307B35CF1FC285A60061C238 /* DMHeartFlyView.m */,
 				307B35D01FC285A60061C238 /* PlayerTableViewCell.h */,
 				307B35D11FC285A60061C238 /* PlayerTableViewCell.m */,
+				307B35CE1FC285A60061C238 /* HeartGiftAnimationView.h */,
+				307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -635,7 +648,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				306879BE1FC3BEA20060C62C /* b4.gif in Resources */,
-				30D73E981FC299B3001D2778 /* Main.storyboard in Resources */,
 				30D73E991FC299B3001D2778 /* LaunchScreen.storyboard in Resources */,
 				30D73E811FC28A4B001D2778 /* Assets.xcassets in Resources */,
 				306879BC1FC3BEA20060C62C /* b2.gif in Resources */,
@@ -742,7 +754,7 @@
 				3067DC3C1FC3F8C700E17DFA /* DCPathItemButton.m in Sources */,
 				306879C81FC3BEA20060C62C /* XJNetworkTool.swift in Sources */,
 				306879B41FC3BEA20060C62C /* LiveTopView.swift in Sources */,
-				307B35DB1FC285A60061C238 /* DMHeartFlyView.m in Sources */,
+				307B35DB1FC285A60061C238 /* HeartGiftAnimationView.m in Sources */,
 				307B35DC1FC285A60061C238 /* PlayerTableViewCell.m in Sources */,
 				3067DC431FC3F8C700E17DFA /* TransitionAnimationController.m in Sources */,
 				306879AE1FC3BEA20060C62C /* HomeModel.swift in Sources */,

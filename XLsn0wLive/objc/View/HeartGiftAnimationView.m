@@ -1,25 +1,20 @@
-//
-//  DMHeartFlyView.m
-//  NOW
-//
-//  Created by ArJun on 16/8/9.
-//  Copyright © 2016年 ArJun. All rights reserved.
-//
 
 #define DMRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define DMRGBAColor(r, g, b ,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 #define DMRandColor DMRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
-#import "DMHeartFlyView.h"
+#import "HeartGiftAnimationView.h"
 
-@interface DMHeartFlyView ()
+@interface HeartGiftAnimationView ()
+
 @property(nonatomic,strong) UIColor *strokeColor;
 @property(nonatomic,strong) UIColor *fillColor;
+
 @end
 
-@implementation DMHeartFlyView
+@implementation HeartGiftAnimationView
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
    self = [super initWithFrame:frame];
     if (self) {
         _strokeColor = [UIColor whiteColor];
@@ -30,7 +25,7 @@
     return self;
 }
 
-static CGFloat PI = M_PI;
+//static CGFloat PI = M_PI;
 -(void)animateInView:(UIView *)view{
     NSTimeInterval totalAnimationDuration = 6;
     CGFloat heartSize = CGRectGetWidth(self.bounds);
@@ -51,7 +46,7 @@ static CGFloat PI = M_PI;
     NSInteger rotationDirection = 1- (2*i);// -1 OR 1
     NSInteger rotationFraction = arc4random_uniform(10);
     [UIView animateWithDuration:totalAnimationDuration animations:^{
-        self.transform = CGAffineTransformMakeRotation(rotationDirection * PI/(16 + rotationFraction*0.2));
+        self.transform = CGAffineTransformMakeRotation(rotationDirection * M_PI/(16 + rotationFraction*0.2));
     } completion:NULL];
     
     UIBezierPath *heartTravelPath = [UIBezierPath bezierPath];
@@ -113,11 +108,11 @@ static CGFloat PI = M_PI;
     [heartPath addQuadCurveToPoint:topLeftCurveStart controlPoint:CGPointMake(topLeftCurveStart.x, topLeftCurveStart.y + curveRadius)];
     
     //Create top left curve
-    [heartPath addArcWithCenter:CGPointMake(topLeftCurveStart.x + curveRadius, topLeftCurveStart.y) radius:curveRadius startAngle:PI endAngle:0 clockwise:YES];
+    [heartPath addArcWithCenter:CGPointMake(topLeftCurveStart.x + curveRadius, topLeftCurveStart.y) radius:curveRadius startAngle:M_PI endAngle:0 clockwise:YES];
     
     //Create top right curve
     CGPoint topRightCurveStart = CGPointMake(topLeftCurveStart.x + 2*curveRadius, topLeftCurveStart.y);
-    [heartPath addArcWithCenter:CGPointMake(topRightCurveStart.x + curveRadius, topRightCurveStart.y) radius:curveRadius startAngle:PI endAngle:0 clockwise:YES];
+    [heartPath addArcWithCenter:CGPointMake(topRightCurveStart.x + curveRadius, topRightCurveStart.y) radius:curveRadius startAngle:M_PI endAngle:0 clockwise:YES];
     
     //Final curve to bottom heart tip
     CGPoint topRightCurveEnd = CGPointMake(topLeftCurveStart.x + 4*curveRadius, topRightCurveStart.y);
