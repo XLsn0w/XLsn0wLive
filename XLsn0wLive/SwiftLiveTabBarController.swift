@@ -10,7 +10,7 @@ class SwiftLiveTabBarController: UITabBarController {
     }
 }
 
-///添加方法
+/// 添加方法
 extension SwiftLiveTabBarController {
     fileprivate func addChildViewController(_ childController: UIViewController, imageName : String, title : String) {
         childController.tabBarItem.image = UIImage(named: imageName)

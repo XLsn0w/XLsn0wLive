@@ -25,8 +25,7 @@
     return self;
 }
 
-//static CGFloat PI = M_PI;
--(void)animateInView:(UIView *)view{
+- (void)addHeartGiftAnimationInView:(UIView *)view{
     NSTimeInterval totalAnimationDuration = 6;
     CGFloat heartSize = CGRectGetWidth(self.bounds);
     CGFloat heartCenterX = self.center.x;

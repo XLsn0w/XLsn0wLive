@@ -63,7 +63,7 @@
 		307B35D81FC285A60061C238 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C71FC285A60061C238 /* PlayerViewController.m */; };
 		307B35D91FC285A60061C238 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CA1FC285A60061C238 /* PlayerModel.m */; };
 		307B35DB1FC285A60061C238 /* HeartGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */; };
-		307B35DC1FC285A60061C238 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35D11FC285A60061C238 /* PlayerTableViewCell.m */; };
+		307B35DC1FC285A60061C238 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35D11FC285A60061C238 /* ListCell.m */; };
 		30D73E7B1FC28A4B001D2778 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D73E6E1FC28A49001D2778 /* AppDelegate.m */; };
 		30D73E7F1FC28A4B001D2778 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D73E751FC28A4A001D2778 /* main.m */; };
 		30D73E801FC28A4B001D2778 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D73E771FC28A4B001D2778 /* Info.plist */; };
@@ -169,8 +169,8 @@
 		307B35CA1FC285A60061C238 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
 		307B35CE1FC285A60061C238 /* HeartGiftAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartGiftAnimationView.h; sourceTree = "<group>"; };
 		307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGiftAnimationView.m; sourceTree = "<group>"; };
-		307B35D01FC285A60061C238 /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
-		307B35D11FC285A60061C238 /* PlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
+		307B35D01FC285A60061C238 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		307B35D11FC285A60061C238 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 		30D73E6E1FC28A49001D2778 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		30D73E751FC28A4A001D2778 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30D73E761FC28A4A001D2778 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +199,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3023096E1FC66950002B4F04 /* HeartGiftAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				307B35CE1FC285A60061C238 /* HeartGiftAnimationView.h */,
+				307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */,
+			);
+			path = HeartGiftAnimation;
+			sourceTree = "<group>";
+		};
 		305DFD041FC57A00006BE4F1 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,9 +495,9 @@
 				30D73E7A1FC28A4B001D2778 /* Assets.xcassets */,
 				30D73E771FC28A4B001D2778 /* Info.plist */,
 				30D73E751FC28A4A001D2778 /* main.m */,
+				30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */,
 				30D73E781FC28A4B001D2778 /* PrefixHeader.pch */,
 				30D73E9C1FC2D8C2001D2778 /* XLsn0wLive-Bridging-Header.h */,
-				30D73E971FC299B3001D2778 /* LaunchScreen.storyboard */,
 				307B35C21FC285A60061C238 /* objc */,
 				3068797E1FC3BEA20060C62C /* swift */,
 				3067DC4B1FC3F95600E17DFA /* Animation */,
@@ -501,6 +510,7 @@
 		307B35B71FC285A60061C238 /* Utiliy */ = {
 			isa = PBXGroup;
 			children = (
+				3023096E1FC66950002B4F04 /* HeartGiftAnimation */,
 				307B35B81FC285A60061C238 /* AFNetwork.h */,
 				307B35B91FC285A60061C238 /* AFNetwork.m */,
 				307B35BA1FC285A60061C238 /* LiveNavigationController.h */,
@@ -547,10 +557,8 @@
 		307B35CB1FC285A60061C238 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				307B35D01FC285A60061C238 /* PlayerTableViewCell.h */,
-				307B35D11FC285A60061C238 /* PlayerTableViewCell.m */,
-				307B35CE1FC285A60061C238 /* HeartGiftAnimationView.h */,
-				307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */,
+				307B35D01FC285A60061C238 /* ListCell.h */,
+				307B35D11FC285A60061C238 /* ListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -755,7 +763,7 @@
 				306879C81FC3BEA20060C62C /* XJNetworkTool.swift in Sources */,
 				306879B41FC3BEA20060C62C /* LiveTopView.swift in Sources */,
 				307B35DB1FC285A60061C238 /* HeartGiftAnimationView.m in Sources */,
-				307B35DC1FC285A60061C238 /* PlayerTableViewCell.m in Sources */,
+				307B35DC1FC285A60061C238 /* ListCell.m in Sources */,
 				3067DC431FC3F8C700E17DFA /* TransitionAnimationController.m in Sources */,
 				306879AE1FC3BEA20060C62C /* HomeModel.swift in Sources */,
 				3067DC3F1FC3F8C700E17DFA /* BaseViewController.m in Sources */,

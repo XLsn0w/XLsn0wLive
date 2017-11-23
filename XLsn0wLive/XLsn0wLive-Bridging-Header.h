@@ -4,3 +4,4 @@
 
 #import "ObjcLiveViewController.h"
 #import "LiveNavigationController.h"
+#import "HeartGiftAnimationView.h"

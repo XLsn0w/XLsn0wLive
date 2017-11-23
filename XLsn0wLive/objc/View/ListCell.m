@@ -1,7 +1,8 @@
 
-#import "PlayerTableViewCell.h"
+#import "ListCell.h"
 
-@interface PlayerTableViewCell ()
+@interface ListCell ()
+
 @property (nonatomic, strong)UIImageView * iconImage;
 @property (nonatomic, strong)UILabel * nameLabel;
 @property (nonatomic, strong)UIButton * address;
@@ -10,9 +11,10 @@
 @property (nonatomic, strong)UIButton *liveBtn;
 @property (nonatomic, strong)UIView *linesView;
 @property (nonatomic, strong)UIView *backView;
+
 @end
 
-@implementation PlayerTableViewCell
+@implementation ListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

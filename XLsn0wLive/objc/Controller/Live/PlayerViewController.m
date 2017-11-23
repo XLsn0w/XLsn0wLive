@@ -40,7 +40,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     if (![self.player isPlaying]) {
-        //准备播放
         [self.player prepareToPlay];
     }
 }
@@ -158,7 +157,7 @@
     [self.view addSubview:heart];
 
     heart.center = CGPointMake(SCREENWIDTH/2, self.view.bounds.size.height - _heartSize/2.0 - 10);
-    [heart animateInView:self.view];
+    [heart addHeartGiftAnimationInView:self.view];
 }
 
 static int _fishIndex = 0;

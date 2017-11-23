@@ -45,11 +45,17 @@ class LiveViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        XJAnimationTool.shared.animationForHeart()
+//        XJAnimationTool.shared.animationForHeart()
+//        let heart = HeartGiftAnimationView()
+//        heart.frame = CGRect(x:0, y:0, width:50, height:50)
+//        ijkLivePlay.view.addSubview(heart)
+//        heart.addHeartGiftAnimation(in: self.ijkLivePlay.view)
+//        heart.center = CGPoint(x:kScreenW/2, y:kScreenH/2)
     }
 }
 
 extension LiveViewController {
+    
     fileprivate func setupUI() {
         self.view.backgroundColor = UIColor.clear
         let requestUrl = URL(string: self.anchorModel.stream_addr ?? "")
@@ -84,6 +90,8 @@ extension LiveViewController {
         topView.frame = ijkLivePlay.view.bounds
         topView.anchors = anchorModel
         topView.backBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
+        
+
         
         // 加载不出来时候，关闭从新加载
         XJAnimationTool.shared.myBlock = { [unowned self] () -> () in

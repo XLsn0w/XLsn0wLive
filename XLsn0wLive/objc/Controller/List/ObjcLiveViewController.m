@@ -1,7 +1,7 @@
 
 #import "ObjcLiveViewController.h"
 
-#import "PlayerTableViewCell.h"
+#import "ListCell.h"
 #import "PlayerViewController.h"
 #import "PlayerModel.h"
 
@@ -10,7 +10,7 @@
 
 @interface ObjcLiveViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView    *tableView;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
@@ -100,9 +100,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    ListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell = [[PlayerTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[ListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.playerModel = self.dataList[indexPath.row];
     return cell;

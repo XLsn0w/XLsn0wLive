@@ -4,7 +4,7 @@
 
 @interface HeartGiftAnimationView : UIView
 
-- (void)animateInView:(UIView *)view;
+- (void)addHeartGiftAnimationInView:(UIView *)view;
 
 @end
 
