@@ -3,7 +3,7 @@ import UIKit
 import MJRefresh
 private let kCellID = "kCellID"
 
-class XJLiveListViewController: UIViewController {
+class SwiftListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     fileprivate lazy var homeVM : XJHomeViewModel = XJHomeViewModel()
@@ -25,11 +25,11 @@ class XJLiveListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        XJLiveListViewController.isDirectionUp = false
+        SwiftListViewController.isDirectionUp = false
     }
 }
 
-extension XJLiveListViewController {
+extension SwiftListViewController {
     fileprivate func setupUI() {
         
         tableView.register(UINib(nibName: "XJListTableViewCell", bundle: nil), forCellReuseIdentifier: kCellID)
@@ -37,7 +37,7 @@ extension XJLiveListViewController {
     }
 }
 
-extension XJLiveListViewController {
+extension SwiftListViewController {
     
     fileprivate func refreshData() {
         tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadHomeData))
@@ -55,7 +55,7 @@ extension XJLiveListViewController {
     }
 }
 
-extension XJLiveListViewController : UITableViewDelegate, UITableViewDataSource {
+extension SwiftListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  homeVM.homeModelArray.count
     }
@@ -93,25 +93,25 @@ extension XJLiveListViewController : UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension XJLiveListViewController {
+extension SwiftListViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffsetY = scrollView.contentOffset.y
-        XJLiveListViewController.isDirectionUp = (lastOffsetY - currentOffsetY) < 0 ? true : false
+        SwiftListViewController.isDirectionUp = (lastOffsetY - currentOffsetY) < 0 ? true : false
         lastOffsetY = currentOffsetY
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if velocity.y > 0 {
-            XJLiveListViewController.isDirectionUp = true
+            SwiftListViewController.isDirectionUp = true
         }else if velocity.y < 0 {
-            XJLiveListViewController.isDirectionUp = false
+            SwiftListViewController.isDirectionUp = false
         }
         beginAnim()
     }
     
     fileprivate func beginAnim() {
-        if XJLiveListViewController.isDirectionUp {
+        if SwiftListViewController.isDirectionUp {
             hiddenTopViewAnim()
         }else {
             showTopViewAnim()

@@ -1,27 +1,29 @@
 
-#import "ObjcLiveViewController.h"
-
+#import "ObjcListViewController.h"
 #import "ListCell.h"
+
+///push->Live
 #import "PlayerViewController.h"
 #import "PlayerModel.h"
 
 #define mainURL @"http://service.inke.com/api/live/aggregation?imsi=&uid=147808343&proto=6&imei=&interest=1&location=0"
 #define Ratio 708/550
 
-@interface ObjcLiveViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ObjcListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView    *tableView;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
-@implementation ObjcLiveViewController
+@implementation ObjcListViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.navigationController.navigationItem.title = @"XLsn0w";
     [self bulidTableView];
-    [self bulidCenterBtn];
+
+    
     [self addRefresh];
 }
 
@@ -50,6 +52,8 @@
         make.centerX.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-20);
     }];
+    btn.layer.borderColor = [UIColor redColor].CGColor;
+    btn.layer.borderWidth = 2;
 }
 
 - (void)customBtnClick{

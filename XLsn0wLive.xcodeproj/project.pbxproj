@@ -26,8 +26,8 @@
 		3067DC481FC3F8C700E17DFA /* MCFireworksButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3067DC341FC3F8C600E17DFA /* MCFireworksButton.m */; };
 		3067DC491FC3F8C700E17DFA /* MCFireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3067DC361FC3F8C600E17DFA /* MCFireworksView.m */; };
 		3067DC4A1FC3F8C700E17DFA /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3067DC391FC3F8C700E17DFA /* RightViewController.m */; };
-		306879AB1FC3BEA20060C62C /* XJLiveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879821FC3BEA20060C62C /* XJLiveListViewController.swift */; };
-		306879AC1FC3BEA20060C62C /* XJLiveListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306879831FC3BEA20060C62C /* XJLiveListViewController.xib */; };
+		306879AB1FC3BEA20060C62C /* SwiftListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879821FC3BEA20060C62C /* SwiftListViewController.swift */; };
+		306879AC1FC3BEA20060C62C /* SwiftListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306879831FC3BEA20060C62C /* SwiftListViewController.xib */; };
 		306879AD1FC3BEA20060C62C /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879851FC3BEA20060C62C /* LiveViewController.swift */; };
 		306879AE1FC3BEA20060C62C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306879871FC3BEA20060C62C /* HomeModel.swift */; };
 		306879AF1FC3BEA20060C62C /* XJListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068798A1FC3BEA20060C62C /* XJListTableViewCell.swift */; };
@@ -59,7 +59,7 @@
 		307B35D41FC285A60061C238 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35BD1FC285A60061C238 /* NSObject+Log.m */; };
 		307B35D51FC285A60061C238 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35BF1FC285A60061C238 /* UIView+Extension.m */; };
 		307B35D61FC285A60061C238 /* UIViewController+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C11FC285A60061C238 /* UIViewController+Extend.m */; };
-		307B35D71FC285A60061C238 /* ObjcLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C51FC285A60061C238 /* ObjcLiveViewController.m */; };
+		307B35D71FC285A60061C238 /* ObjcListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C51FC285A60061C238 /* ObjcListViewController.m */; };
 		307B35D81FC285A60061C238 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35C71FC285A60061C238 /* PlayerViewController.m */; };
 		307B35D91FC285A60061C238 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CA1FC285A60061C238 /* PlayerModel.m */; };
 		307B35DB1FC285A60061C238 /* HeartGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 307B35CF1FC285A60061C238 /* HeartGiftAnimationView.m */; };
@@ -122,8 +122,8 @@
 		3067DC361FC3F8C600E17DFA /* MCFireworksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFireworksView.m; sourceTree = "<group>"; };
 		3067DC381FC3F8C700E17DFA /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		3067DC391FC3F8C700E17DFA /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		306879821FC3BEA20060C62C /* XJLiveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLiveListViewController.swift; sourceTree = "<group>"; };
-		306879831FC3BEA20060C62C /* XJLiveListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLiveListViewController.xib; sourceTree = "<group>"; };
+		306879821FC3BEA20060C62C /* SwiftListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftListViewController.swift; sourceTree = "<group>"; };
+		306879831FC3BEA20060C62C /* SwiftListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftListViewController.xib; sourceTree = "<group>"; };
 		306879851FC3BEA20060C62C /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		306879871FC3BEA20060C62C /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		3068798A1FC3BEA20060C62C /* XJListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJListTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		307B35BF1FC285A60061C238 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		307B35C01FC285A60061C238 /* UIViewController+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extend.h"; sourceTree = "<group>"; };
 		307B35C11FC285A60061C238 /* UIViewController+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extend.m"; sourceTree = "<group>"; };
-		307B35C41FC285A60061C238 /* ObjcLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcLiveViewController.h; sourceTree = "<group>"; };
-		307B35C51FC285A60061C238 /* ObjcLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcLiveViewController.m; sourceTree = "<group>"; };
+		307B35C41FC285A60061C238 /* ObjcListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcListViewController.h; sourceTree = "<group>"; };
+		307B35C51FC285A60061C238 /* ObjcListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcListViewController.m; sourceTree = "<group>"; };
 		307B35C61FC285A60061C238 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		307B35C71FC285A60061C238 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		307B35C91FC285A60061C238 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
@@ -208,11 +208,21 @@
 			path = HeartGiftAnimation;
 			sourceTree = "<group>";
 		};
+		3023096F1FC6CBBD002B4F04 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				307B35C31FC285A60061C238 /* Controller */,
+				307B35CB1FC285A60061C238 /* View */,
+				307B35C81FC285A60061C238 /* Model */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		305DFD041FC57A00006BE4F1 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				307B35C41FC285A60061C238 /* ObjcLiveViewController.h */,
-				307B35C51FC285A60061C238 /* ObjcLiveViewController.m */,
+				307B35C41FC285A60061C238 /* ObjcListViewController.h */,
+				307B35C51FC285A60061C238 /* ObjcListViewController.m */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -379,8 +389,8 @@
 		306879811FC3BEA20060C62C /* List */ = {
 			isa = PBXGroup;
 			children = (
-				306879821FC3BEA20060C62C /* XJLiveListViewController.swift */,
-				306879831FC3BEA20060C62C /* XJLiveListViewController.xib */,
+				306879821FC3BEA20060C62C /* SwiftListViewController.swift */,
+				306879831FC3BEA20060C62C /* SwiftListViewController.xib */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -528,9 +538,7 @@
 		307B35C21FC285A60061C238 /* objc */ = {
 			isa = PBXGroup;
 			children = (
-				307B35C31FC285A60061C238 /* Controller */,
-				307B35CB1FC285A60061C238 /* View */,
-				307B35C81FC285A60061C238 /* Model */,
+				3023096F1FC6CBBD002B4F04 /* Live */,
 				307B35B71FC285A60061C238 /* Utiliy */,
 			);
 			path = objc;
@@ -670,7 +678,7 @@
 				306879C31FC3BEA20060C62C /* c4.png in Resources */,
 				306879C21FC3BEA20060C62C /* c3.gif in Resources */,
 				306879BA1FC3BEA20060C62C /* XJDomain.bundle in Resources */,
-				306879AC1FC3BEA20060C62C /* XJLiveListViewController.xib in Resources */,
+				306879AC1FC3BEA20060C62C /* SwiftListViewController.xib in Resources */,
 				306879BD1FC3BEA20060C62C /* b3.gif in Resources */,
 				306879C11FC3BEA20060C62C /* c2.gif in Resources */,
 			);
@@ -755,7 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				306879AB1FC3BEA20060C62C /* XJLiveListViewController.swift in Sources */,
+				306879AB1FC3BEA20060C62C /* SwiftListViewController.swift in Sources */,
 				3067DC4A1FC3F8C700E17DFA /* RightViewController.m in Sources */,
 				3067DC421FC3F8C700E17DFA /* KeyFrameAnimationController.m in Sources */,
 				306879C61FC3BEA20060C62C /* SwiftyPrefixHeader.swift in Sources */,
@@ -769,7 +777,7 @@
 				3067DC3F1FC3F8C700E17DFA /* BaseViewController.m in Sources */,
 				306879B61FC3BEA20060C62C /* XJHomeViewModel.swift in Sources */,
 				306879AD1FC3BEA20060C62C /* LiveViewController.swift in Sources */,
-				307B35D71FC285A60061C238 /* ObjcLiveViewController.m in Sources */,
+				307B35D71FC285A60061C238 /* ObjcListViewController.m in Sources */,
 				307B35D41FC285A60061C238 /* NSObject+Log.m in Sources */,
 				306879B11FC3BEA20060C62C /* LiveTopCollectionView.swift in Sources */,
 				3067DC3E1FC3F8C700E17DFA /* BaseAnimationController.m in Sources */,
