@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Log.h"
 #import <objc/runtime.h>
+
 @implementation NSObject (Log)
 
 //+ (void)load {

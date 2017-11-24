@@ -370,9 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				306879801FC3BEA20060C62C /* Controller */,
-				306879861FC3BEA20060C62C /* Model */,
 				306879881FC3BEA20060C62C /* View */,
 				306879921FC3BEA20060C62C /* ViewModel */,
+				306879861FC3BEA20060C62C /* Model */,
 			);
 			path = Live;
 			sourceTree = "<group>";
