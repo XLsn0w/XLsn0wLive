@@ -19,7 +19,7 @@ class LiveViewController: UIViewController {
         super.viewWillAppear(animated)
         self.view.backgroundColor = UIColor.white
         self.topView.isHidden = true
-        XJAnimationTool.shared.showAnimation(view: self.view)
+        XLsn0wAnimationKit.shared.showAnimation(view: self.view)
         
 
         
@@ -33,8 +33,8 @@ class LiveViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
-        XJAnimationTool.shared.dismissAnimation({})
-        XJAnimationTool.shared.removeCycleTimer()
+        XLsn0wAnimationKit.shared.dismissAnimation({})
+        XLsn0wAnimationKit.shared.removeCycleTimer()
         
         /* 释放 */
         if	ijkLivePlay != nil {
@@ -94,11 +94,11 @@ extension LiveViewController {
 
         
         // 加载不出来时候，关闭从新加载
-        XJAnimationTool.shared.myBlock = { [unowned self] () -> () in
+        XLsn0wAnimationKit.shared.myBlock = { [unowned self] () -> () in
             self.backClick()
         }
         
-        XJAnimationTool.shared.addCycleTimer()
+        XLsn0wAnimationKit.shared.addCycleTimer()
     }
 }
 
@@ -114,7 +114,7 @@ extension LiveViewController {
             print("停止")
         case .playing:
             print("正在播放")
-            XJAnimationTool.shared.dismissAnimation({
+            XLsn0wAnimationKit.shared.dismissAnimation({
                 self.ijkLivePlay.play()
                 self.topView.isHidden = false
             })

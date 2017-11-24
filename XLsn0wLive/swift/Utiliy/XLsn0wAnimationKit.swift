@@ -4,9 +4,9 @@ import Foundation
 
 typealias animationCloseBlock = () -> ()
 
-class XJAnimationTool {
+class XLsn0wAnimationKit {
     
-    static var shared : XJAnimationTool = XJAnimationTool()
+    static var shared : XLsn0wAnimationKit = XLsn0wAnimationKit()
     
     fileprivate lazy var imageView : UIImageView = { [unowned self] in
         let imageView = UIImageView(image: UIImage(named: "img_loading_1"))
@@ -24,7 +24,7 @@ class XJAnimationTool {
     fileprivate var view : UIView!
 }
 
-extension XJAnimationTool {
+extension XLsn0wAnimationKit {
     func showAnimation(view : UIView) {
         view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         view.addSubview(imageView)
@@ -50,14 +50,14 @@ extension XJAnimationTool {
     }
 }
 
-extension XJAnimationTool {
+extension XLsn0wAnimationKit {
     @objc fileprivate func backClick() {
          self.myBlock!()
         dismissAnimation {}
     }
 }
 
-extension XJAnimationTool {
+extension XLsn0wAnimationKit {
     func animationForHeart() {
         let imageV = UIImageView()
         imageV.frame = CGRect(x: kScreenW - CGFloat(84), y: kScreenH - CGFloat(58), width: 25, height: 25)
@@ -85,7 +85,7 @@ extension XJAnimationTool {
     }
 }
 
-extension XJAnimationTool {
+extension XLsn0wAnimationKit {
     func addCycleTimer() {
         timer = Timer(timeInterval: 0.35, target: self, selector: #selector(scrollToNext), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode:RunLoopMode.commonModes)
@@ -98,11 +98,11 @@ extension XJAnimationTool {
     
     @objc fileprivate func scrollToNext() {
         let  time : Double = 0.1
-        XJAnimationTool.shared.animationForHeart()
+        XLsn0wAnimationKit.shared.animationForHeart()
         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + time) {
-            XJAnimationTool.shared.animationForHeart()
+            XLsn0wAnimationKit.shared.animationForHeart()
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + time) {
-                XJAnimationTool.shared.animationForHeart()
+                XLsn0wAnimationKit.shared.animationForHeart()
             }
         }
     }

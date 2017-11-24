@@ -8,9 +8,9 @@ class XJHomeViewModel {
 
 extension XJHomeViewModel {
 
-    ///在Model中 处理View数据解析  --> ViewModel
+    /// 在Model中 处理View数据解析  --> ViewModel
     func loadData(_ finishedCallBack : @escaping() -> ()) {
-        XJNetworkTool.requestData(.get, urlString: kApiHomeList) { (result, isSuccess) in
+        SwiftNetworkRequest.requestData(.get, urlString: kApiHomeList) { (result, isSuccess) in
             let jsonDic = JSON(result)
             let dataArray = jsonDic["lives"]
             print(dataArray)

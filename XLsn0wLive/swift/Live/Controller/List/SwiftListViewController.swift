@@ -33,7 +33,7 @@ extension SwiftListViewController {
     fileprivate func setupUI() {
         
         tableView.register(UINib(nibName: "XJListTableViewCell", bundle: nil), forCellReuseIdentifier: kCellID)
-        XJAnimationTool.shared.showAnimation(view: self.view)
+        XLsn0wAnimationKit.shared.showAnimation(view: self.view)
     }
 }
 
@@ -47,7 +47,7 @@ extension SwiftListViewController {
     
     @objc fileprivate func loadHomeData() {
         homeVM.loadData {
-            XJAnimationTool.shared.dismissAnimation({
+            XLsn0wAnimationKit.shared.dismissAnimation({
                 self.tableView.mj_header.endRefreshing()
                 self.tableView.reloadData()
             })

@@ -7,11 +7,11 @@ enum MethodType {
     case post
 }
 
-class XJNetworkTool: NSObject {
+class SwiftNetworkRequest: NSObject {
 
 }
 
-extension XJNetworkTool {
+extension SwiftNetworkRequest {
     
     ///
     class func requestData(_ type : MethodType,
