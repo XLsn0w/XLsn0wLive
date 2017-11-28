@@ -11,7 +11,7 @@ class SwiftLiveNavigationController: UINavigationController {
         let dict:Dictionary = [NSForegroundColorAttributeName : UIColor.white];
         
         self.navigationBar.titleTextAttributes = dict;
-        setupPanGes()
+        addPanGesture()
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -23,7 +23,7 @@ class SwiftLiveNavigationController: UINavigationController {
 }
 
 extension SwiftLiveNavigationController {
-    fileprivate  func setupPanGes() {
+    fileprivate  func addPanGesture() {
         guard let systemGes = interactivePopGestureRecognizer else { return }
         guard let gesView = systemGes.view else { return }
         let targets = systemGes.value(forKey: "_targets") as? [NSObject]
