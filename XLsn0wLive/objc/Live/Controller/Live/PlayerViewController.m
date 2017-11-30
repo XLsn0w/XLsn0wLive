@@ -8,7 +8,7 @@
 @interface PlayerViewController ()
 
 //@property (atomic, retain) id<IJKMediaPlayback> player;
-@property (atomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *player;
+@property (nonatomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *player;
 @property (weak, nonatomic) UIView *PlayerView;
 @property (atomic, strong) NSURL *url;
 @property (nonatomic, assign)int number;

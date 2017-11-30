@@ -6,6 +6,7 @@ private let kCellID = "kCellID"
 class SwiftListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     fileprivate lazy var homeVM : XJHomeViewModel = XJHomeViewModel()
     static var isDirectionUp : Bool = false
     fileprivate var lastOffsetY : CGFloat = 0
