@@ -80,6 +80,14 @@
  
  
  
+ Runloop本质：mach port和mach_msg()
+ 
+ 
+ Mach是XNU的内核，进程、线程和虚拟内存等对象通过端口发消息进行通信，Runloop通过mach_msg()函数发送消息，如果没有port 消息，内核会将线程置于等待状态 mach_msg_trap() 。如果有消息，判断消息类型处理事件，并通过modeItem的callback回调(处理事件的具体执行是在DoBlock里还是在回调里目前我还不太明白？？？)。
+ 
+ Runloop有两个关键判断点，一个是通过msg决定Runloop是否等待，一个是通过判断退出条件来决定Runloop是否循环。
+ 
+
  
  
  
