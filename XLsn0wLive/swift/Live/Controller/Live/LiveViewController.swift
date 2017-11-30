@@ -4,9 +4,8 @@ import IJKMediaFramework
 
 class LiveViewController: UIViewController {
 
-    @IBOutlet weak var btn: UIButton!
     var anchorModel : HomeModel!
-    var ijkLivePlay : IJKFFMoviePlayerController!
+    var ijkPlayer : IJKFFMoviePlayerController!
     fileprivate lazy var topView : LiveTopView = LiveTopView.topView()
     
     override func viewDidLoad() {
@@ -27,7 +26,7 @@ class LiveViewController: UIViewController {
                                                 selector: #selector(playbackStateDidChange(noti:)),
                                                 name: Notification.Name.IJKMPMoviePlayerLoadStateDidChange,
                                                 object: nil)
-        self.ijkLivePlay.prepareToPlay()
+        ijkPlayer.prepareToPlay()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,10 +36,10 @@ class LiveViewController: UIViewController {
         XLsn0wAnimationKit.shared.removeCycleTimer()
         
         /* 释放 */
-        if	ijkLivePlay != nil {
-            ijkLivePlay.pause()
-            ijkLivePlay.stop()
-            ijkLivePlay.shutdown()
+        if	ijkPlayer != nil {
+            ijkPlayer.pause()
+            ijkPlayer.stop()
+            ijkPlayer.shutdown()
         }
     }
 
@@ -60,31 +59,29 @@ extension LiveViewController {
         let options = IJKFFOptions.byDefault()
         
         // 0.创建播放控制器
-        ijkLivePlay = IJKFFMoviePlayerController(contentURL: requestUrl, with: options!)
+        ijkPlayer = IJKFFMoviePlayerController(contentURL: requestUrl, with: options!)
         
         // 1.设置frame为整个屏幕
-        ijkLivePlay.view.frame = view.bounds
+        ijkPlayer.view.frame = view.bounds
         
         // 2.设置适配横竖屏幕(设置四边固定，长度灵活)
-        ijkLivePlay.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        ijkPlayer.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         // 3.设置播放视图的缩放模式
-        ijkLivePlay.scalingMode = .aspectFill
+        ijkPlayer.scalingMode = .aspectFill
         
         // 4.设置自动播放
-        ijkLivePlay.shouldAutoplay = true
+        ijkPlayer.shouldAutoplay = true
         
         // 5.自动更新子视图的大小
         self.view.autoresizesSubviews = true
         
-        self.view.addSubview(self.ijkLivePlay.view)
-        ijkLivePlay.view.addSubview(topView)
-        topView.frame = ijkLivePlay.view.bounds
+        self.view.addSubview(ijkPlayer.view)
+        ijkPlayer.view.addSubview(topView)
+        topView.frame = ijkPlayer.view.bounds
         topView.anchors = anchorModel
         topView.backBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
-        
 
-        
         // 加载不出来时候，关闭从新加载
         XLsn0wAnimationKit.shared.myBlock = { [unowned self] () -> () in
             self.backClick()
@@ -95,19 +92,20 @@ extension LiveViewController {
 }
 
 extension LiveViewController {
-    @IBAction func backClick() {
+    
+    open func backClick() {
        dismiss(animated: true, completion: nil)
     }
     
     @objc fileprivate func playbackStateDidChange(noti : Notification) {
         
-        switch (self.ijkLivePlay.playbackState) {
+        switch (self.ijkPlayer.playbackState) {
         case .stopped:
             print("停止")
         case .playing:
             print("正在播放")
             XLsn0wAnimationKit.shared.dismissAnimation({
-                self.ijkLivePlay.play()
+                self.ijkPlayer.play()///此处必须是self.
                 self.topView.isHidden = false
             })
         case .paused:
